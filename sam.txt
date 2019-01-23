@@ -1,0 +1,6 @@
+// create branches
+git checkout -b [name_of_your_new_branch]
+//changes branches
+git checkout [name_of_your_new_branch]
+//push 
+git push origin [name_of_your_new_branch]
