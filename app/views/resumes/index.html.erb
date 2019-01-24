@@ -1,0 +1,29 @@
+<div class="container">
+<% if !flash[:notice].blank? %>
+<div>
+	<%= flash[:notice] %>
+</div>                    
+<% end %>
+<br>
+<%= link_to "New Resume",resumes_new_path %>
+<br>
+<br>
+<table border="3">
+	<thread>
+	<tr>
+	<th>Candiate Name</th>
+	<th>Download Link</th>
+	<th> Action</th>
+</tr>
+</thread>
+<tbody>
+	<% @resumes.each do |resume| %>
+	<tr>
+		<td><%= resume.name %></td>
+		<td><%= link_to "Download", resume.attachment_url %></td>
+		<td><%= link_to "Delete", resume,method: :delete%></td>
+	</tr>
+	<% end %>	
+</tbody>
+</table>
+</div>
